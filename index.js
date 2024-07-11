@@ -22,7 +22,6 @@ hexo.extend.filter.register('after_generate', function (locals) {
       loading: config.loading ? urlFor(config.loading) : "https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif",
       clock_css: config.clock_css ? urlFor(config.clock_css) : "https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css",
       clock_js: config.clock_js ? urlFor(config.clock_js) : "https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js",
-      ip_api: config.ip_api ? urlFor(config.ip_api) : "https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0",
       qweather_key: config.qweather_key ? config.qweather_key : "b16a1fa0e63c46a4b8f28abfb06ae3fe",
       gaud_map_key: config.gaud_map_key ? config.gaud_map_key : "e2b04289e870b005374ee030148d64fd&s=rsv3",
       default_rectangle_enable: config.default_rectangle ? config.default_rectangle : false,
@@ -34,7 +33,7 @@ hexo.extend.filter.register('after_generate', function (locals) {
     //样式资源
   const css_text = `<link rel="stylesheet" href="${data.clock_css}" />`
     //脚本资源
-  const js_text = `<script src="${data.ip_api}"></script><script data-pjax src="${data.clock_js}"></script>`
+  const js_text = `<script data-pjax src="${data.clock_js}"></script>`
   //注入容器声明
   var get_layout
   //若指定为class类型的容器
